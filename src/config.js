@@ -1,5 +1,5 @@
 const config = {
-    POWER_LIST: ["100%", "25%", "0%"],
+    USE_SITUATION_REFRESH_PERIOD_IN_SECS: 8,
   };
   
   export default config;

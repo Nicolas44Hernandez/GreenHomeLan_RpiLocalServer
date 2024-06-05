@@ -1,8 +1,8 @@
 <template>
   <div>
    <br>
-   <h2>{{ appName }}</h2>
-   <h3>v{{ appVersion }}</h3>
+   <h1>{{ appName }}</h1>
+   <h2>v{{ appVersion }}</h2>
    <p>Designed and developed by {{ developer }}</p>
    <p>{{ email }}</p>
  </div>

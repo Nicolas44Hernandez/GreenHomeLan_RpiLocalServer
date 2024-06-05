@@ -3,17 +3,12 @@ import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-<header v-if="!isLoginPage">
-    <!-- <div>
-      <img alt="EPI logo" class="logo" src="@/assets/rayo.png"/>
-    </div> -->
-    <div>
-      <a class="logout" v-on:click="logout" href="#">Logout</a>  
-    </div>
+<header>
     <div>
       <div class="wrapper">      
         <nav>
-            <RouterLink to="/">Home</RouterLink>             
+            <RouterLink to="/">Home</RouterLink>     
+            <RouterLink to="/about"  >About</RouterLink>           
         </nav>
       </div>    
     </div>   
@@ -26,23 +21,6 @@ import { RouterLink, RouterView } from 'vue-router';
 <script>
 export default {
   name: 'Header',
-  data() {
-    return {
-        isLoginPage: true
-    };
-  },
-  // watch: {
-  //   '$route'(to, from) {
-  //     // Update currentRoute whenever route changes
-  //     this.isLoginPage = to.path == "/login"
-  //   }
-  // },
-  methods:{
-    logout(){
-        console.log("logout button");
-        //this.$emit('logout',"");
-    },     
-  },
 }
 
 </script>
@@ -57,15 +35,6 @@ header {
     background-color: #fff; /* Set background color if needed */
     z-index: 1000; /* Set a high z-index to make sure it stays above other elements */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for a subtle effect */
-  }
-.logout {
-    position: fixed;
-    text-align: center;
-    top: 0;
-    left: 95%;  
-    right: 1;    
-    width: 5%;
-    z-index: 1001; /* Set a high z-index to make sure it stays above other elements */
   }
 
 .logo {
@@ -123,7 +92,7 @@ nav a:first-of-type {
   nav {
     /* text-align: left;
     margin-left: -1rem; */
-    font-size: 1rem;
+    font-size: 2rem;
 
     padding: 0;
     /* margin-top: 1rem; */
